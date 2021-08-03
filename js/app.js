@@ -11,6 +11,7 @@ let locationOne = {
   aveCookies: 6.3,
   customersPerHour: [],
   cookiesPerHour: [],
+  // totalDailyCookies: 0,
   aveCustPerHour: function(){
     for(let i = 0; i < hours.length; i++){
       this.customersPerHour.push(custPerHour(this.minCustomers,this.maxCustomers));
@@ -19,6 +20,7 @@ let locationOne = {
   aveCookiesPerHour: function(){
   for(let j = 0; j < hours.length; j++){
     this.cookiesPerHour.push(Math.floor(this.customersPerHour[j] * this.aveCookies));
+    // this.totalDailyCookies = this.totalDailyCookies + oneHour;
   }
 }
 };
@@ -114,20 +116,39 @@ let locationFive = {
 locationFive.aveCustPerHour();
 locationFive.aveCookiesPerHour();
 
-let parentElement = document.getElementById('salesData');
+// let parentElement = document.getElementById('salesData');
 
-let article = document.createElement('article');
-console.log('article');
-parentElement.appendChild(article);
+// let article = document.createElement('article');
+// console.log('article');
+// parentElement.appendChild(article);
 
-let h2 = document.createElement('h2');
-h2.textContent = locationOne.storeName;
-console.log(h2);
-article.appendChild(h2);
+// let h2 = document.createElement('h2');
+// h2.textContent = locationOne.storeName;
+// console.log(h2);
+// article.appendChild(h2);
 
+render(){
+  this.calcCookiesPerHour();
+  const unorderedList = document.getElementById('Seattle');
+  for(let i = 0; i < hours.length; i++){
+    let listItem = document.createElement('li');
+    listItem.textContent = hours[i] + ':' + this.cookiesPerHour[i] + 'cookies';
+    unorderedList.appendChild(listItem);
+  }
+  let listItem = document.createElement('li');
+  listItem.textContent = 'Total:' + this.totalDailyCookies + ' cookies'
+  unorderedList.appendChild(listItem);
+}
 
+// const allLocations = [locationOne]
 
+// IFFE
 
+// (function renderAllLocations(){
+//   for(let i = 0; i < allLocations.length; i++){
+//     allLocations[i].render();
+//   }
+// })();
 
 
 
