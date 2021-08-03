@@ -244,33 +244,3 @@ for (let i = 0; i < locationOne.cookiesPerHour.length; i++) {
 totalCookiesLi = document.createElement('li');
 totalCookiesLi.textContent = 'Total: ' + locationFive.totalDailyCookies;
 cookiesUl.appendChild(totalCookiesLi);
-
-
-
-// render(){;
-//   this.calcCookiesPerHour();
-//   const unorderedList = document.getElementById('Seattle');
-//   for(let i = 0; i < hours.length; i++){
-//     let listItem = document.createElement('li');
-//     listItem.textContent = hours[i] + ':' + this.cookiesPerHour[i] + 'cookies';
-//     unorderedList.appendChild(listItem);
-//   }
-//   let listItem = document.createElement('li');
-//   listItem.textContent = 'Total:' + this.totalDailyCookies + ' cookies'
-//   unorderedList.appendChild(listItem);
-// }
-
-// const allLocations = [locationOne]
-
-// IFFE
-
-// (function renderAllLocations(){
-//   for(let i = 0; i < allLocations.length; i++){
-//     allLocations[i].render();
-//   }
-// })();
-
-
-
-
-
