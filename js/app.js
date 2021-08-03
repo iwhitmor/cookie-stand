@@ -113,3 +113,23 @@ let locationFive = {
 };
 locationFive.aveCustPerHour();
 locationFive.aveCookiesPerHour();
+
+let parentElement = document.getElementById('salesData');
+
+let article = document.createElement('article');
+console.log('article');
+parentElement.appendChild(article);
+
+let h2 = document.createElement('h2');
+h2.textContent = locationOne.storeName;
+console.log(h2);
+article.appendChild(h2);
+
+
+
+
+
+
+
+
+
