@@ -141,7 +141,9 @@ for (let i = 0; i < locationOne.cookiesPerHour.length; i++) {
   cookiesUl.appendChild(cookiesLi);
 }
 
-
+let totalCookiesLi = document.createElement('li');
+totalCookiesLi.textContent = 'Total: ' + locationOne.totalDailyCookies;
+cookiesUl.appendChild(totalCookiesLi);
 
 
 
