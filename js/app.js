@@ -23,7 +23,7 @@ let locationOne = {
       this.totalDailyCookies += oneHour;
       this.cookiesPerHour.push(oneHour);
     }
-    console.log('Total daily cookies', this.totalDailyCookies);
+    console.log('Total daily cookies ' + this.storeName, this.totalDailyCookies);
   }
 };
 
@@ -41,6 +41,7 @@ let locationTwo = {
   aveCookies: 1.2,
   customersPerHour: [],
   cookiesPerHour: [],
+  totalDailyCookies: 0,
   aveCustPerHour: function () {
     for (let i = 0; i < hours.length; i++) {
       this.customersPerHour.push(custPerHour(this.minCustomers, this.maxCustomers));
@@ -48,8 +49,11 @@ let locationTwo = {
   },
   aveCookiesPerHour: function () {
     for (let j = 0; j < hours.length; j++) {
-      this.cookiesPerHour.push(Math.floor(this.customersPerHour[j] * this.aveCookies));
+      let oneHour = Math.floor(this.customersPerHour[j] * this.aveCookies);
+      this.totalDailyCookies += oneHour;
+      this.cookiesPerHour.push(oneHour);
     }
+    console.log('Total daily cookies ' + this.storeName, this.totalDailyCookies);
   }
 };
 locationTwo.aveCustPerHour();
@@ -62,6 +66,7 @@ let locationThree = {
   aveCookies: 3.7,
   customersPerHour: [],
   cookiesPerHour: [],
+  totalDailyCookies: 0,
   aveCustPerHour: function () {
     for (let i = 0; i < hours.length; i++) {
       this.customersPerHour.push(custPerHour(this.minCustomers, this.maxCustomers));
@@ -69,8 +74,11 @@ let locationThree = {
   },
   aveCookiesPerHour: function () {
     for (let j = 0; j < hours.length; j++) {
-      this.cookiesPerHour.push(Math.floor(this.customersPerHour[j] * this.aveCookies));
+      let oneHour = Math.floor(this.customersPerHour[j] * this.aveCookies);
+      this.totalDailyCookies += oneHour;
+      this.cookiesPerHour.push(oneHour);
     }
+    console.log('Total daily cookies ' + this.storeName, this.totalDailyCookies);
   }
 };
 locationThree.aveCustPerHour();
@@ -83,6 +91,7 @@ let locationFour = {
   aveCookies: 2.3,
   customersPerHour: [],
   cookiesPerHour: [],
+  totalDailyCookies: 0,
   aveCustPerHour: function () {
     for (let i = 0; i < hours.length; i++) {
       this.customersPerHour.push(custPerHour(this.minCustomers, this.maxCustomers));
@@ -90,8 +99,11 @@ let locationFour = {
   },
   aveCookiesPerHour: function () {
     for (let j = 0; j < hours.length; j++) {
-      this.cookiesPerHour.push(Math.floor(this.customersPerHour[j] * this.aveCookies));
+      let oneHour = Math.floor(this.customersPerHour[j] * this.aveCookies);
+      this.totalDailyCookies += oneHour;
+      this.cookiesPerHour.push(oneHour);
     }
+    console.log('Total daily cookies ' + this.storeName, this.totalDailyCookies);
   }
 };
 locationFour.aveCustPerHour();
@@ -104,6 +116,7 @@ let locationFive = {
   aveCookies: 4.6,
   customersPerHour: [],
   cookiesPerHour: [],
+  totalDailyCookies: 0,
   aveCustPerHour: function () {
     for (let i = 0; i < hours.length; i++) {
       this.customersPerHour.push(custPerHour(this.minCustomers, this.maxCustomers));
@@ -111,8 +124,11 @@ let locationFive = {
   },
   aveCookiesPerHour: function () {
     for (let j = 0; j < hours.length; j++) {
-      this.cookiesPerHour.push(Math.floor(this.customersPerHour[j] * this.aveCookies));
+      let oneHour = Math.floor(this.customersPerHour[j] * this.aveCookies);
+      this.totalDailyCookies += oneHour;
+      this.cookiesPerHour.push(oneHour);
     }
+    console.log('Total daily cookies ' + this.storeName, this.totalDailyCookies);
   }
 };
 locationFive.aveCustPerHour();
@@ -145,6 +161,89 @@ let totalCookiesLi = document.createElement('li');
 totalCookiesLi.textContent = 'Total: ' + locationOne.totalDailyCookies;
 cookiesUl.appendChild(totalCookiesLi);
 
+h2 = document.createElement('h2');
+h2.setAttribute('class', 'storeName');
+h2.textContent = locationTwo.storeName;
+console.log(h2);
+article.appendChild(h2);
+
+cookiesUl = document.createElement('ul');
+cookiesUl.setAttribute('class', 'cookiesPerHour');
+article.appendChild(cookiesUl);
+
+for (let i = 0; i < locationOne.cookiesPerHour.length; i++) {
+  let cookiesLi = document.createElement('li');
+  console.log(cookiesLi);
+  cookiesLi.textContent = hours[i] + ':' + ' ' + locationTwo.cookiesPerHour[i];
+  cookiesUl.appendChild(cookiesLi);
+}
+
+totalCookiesLi = document.createElement('li');
+totalCookiesLi.textContent = 'Total: ' + locationTwo.totalDailyCookies;
+cookiesUl.appendChild(totalCookiesLi);
+
+h2 = document.createElement('h2');
+h2.setAttribute('class', 'storeName');
+h2.textContent = locationThree.storeName;
+console.log(h2);
+article.appendChild(h2);
+
+cookiesUl = document.createElement('ul');
+cookiesUl.setAttribute('class', 'cookiesPerHour');
+article.appendChild(cookiesUl);
+
+for (let i = 0; i < locationOne.cookiesPerHour.length; i++) {
+  let cookiesLi = document.createElement('li');
+  console.log(cookiesLi);
+  cookiesLi.textContent = hours[i] + ':' + ' ' + locationThree.cookiesPerHour[i];
+  cookiesUl.appendChild(cookiesLi);
+}
+
+totalCookiesLi = document.createElement('li');
+totalCookiesLi.textContent = 'Total: ' + locationThree.totalDailyCookies;
+cookiesUl.appendChild(totalCookiesLi);
+
+h2 = document.createElement('h2');
+h2.setAttribute('class', 'storeName');
+h2.textContent = locationFour.storeName;
+console.log(h2);
+article.appendChild(h2);
+
+cookiesUl = document.createElement('ul');
+cookiesUl.setAttribute('class', 'cookiesPerHour');
+article.appendChild(cookiesUl);
+
+for (let i = 0; i < locationOne.cookiesPerHour.length; i++) {
+  let cookiesLi = document.createElement('li');
+  console.log(cookiesLi);
+  cookiesLi.textContent = hours[i] + ':' + ' ' + locationFour.cookiesPerHour[i];
+  cookiesUl.appendChild(cookiesLi);
+}
+
+totalCookiesLi = document.createElement('li');
+totalCookiesLi.textContent = 'Total: ' + locationFour.totalDailyCookies;
+cookiesUl.appendChild(totalCookiesLi);
+
+h2 = document.createElement('h2');
+h2.setAttribute('class', 'storeName');
+h2.textContent = locationFive.storeName;
+console.log(h2);
+article.appendChild(h2);
+
+cookiesUl = document.createElement('ul');
+cookiesUl.setAttribute('class', 'cookiesPerHour');
+article.appendChild(cookiesUl);
+
+for (let i = 0; i < locationOne.cookiesPerHour.length; i++) {
+  let cookiesLi = document.createElement('li');
+  console.log(cookiesLi);
+  cookiesLi.textContent = hours[i] + ':' + ' ' + locationFive.cookiesPerHour[i];
+  cookiesUl.appendChild(cookiesLi);
+}
+
+totalCookiesLi = document.createElement('li');
+totalCookiesLi.textContent = 'Total: ' + locationFive.totalDailyCookies;
+cookiesUl.appendChild(totalCookiesLi);
 
 
 
