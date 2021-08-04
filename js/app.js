@@ -55,16 +55,22 @@ Location.prototype.render = function () {
   let totalCookiesLi = document.createElement('li');
   totalCookiesLi.textContent = `Total: ${this.totalDailyCookies}`;
   cookiesUl.appendChild(totalCookiesLi);
+
+  //Table for all of this stuff
+
+  let locationTable = document.getElementById('storeLocationTable');
+  let locationRow = document.createElement('tr');
+
+  let storeNameCell = document.createElement('td');
+  storeNameCell.textContent = this.storeName;
+  locationRow.appendChild(storeNameCell);
+
+  locationTable.appendChild(locationRow);
+
 };
 
-let locationTable = document.getElementById('storeLocationTable');
-let locationRow = document.createElement('tr');
 
-let storeRow = document.createElement('td');
-storeRow.textContent = this.storeName;
-locationRow.appendChild(storeRow);
 
-locationTable.appendChild(locationRow);
 
 let locationOne = new Location('Seattle', 23, 65, 6.3, [], [], 0);
 locationOne.aveCustPerHour();
