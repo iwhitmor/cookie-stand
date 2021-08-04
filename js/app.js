@@ -35,42 +35,25 @@ function custPerHour(min, max) {
 Location.prototype.render = function () {
   let parentElement = document.getElementById('salesData');
   console.log(parentElement);
+
   let article = document.createElement('article');
   console.log('article');
   parentElement.appendChild(article);
-  let h2 = document.createElement('h2');
-  h2.setAttribute('class', 'storeName');
-  h2.textContent = this.storeName;
-  console.log(h2);
-  article.appendChild(h2);
-  let cookiesUl = document.createElement('ul');
-  cookiesUl.setAttribute('class', 'cookiesPerHour');
-  article.appendChild(cookiesUl);
-  for (let i = 0; i < this.cookiesPerHour.length; i++) {
-    let cookiesLi = document.createElement('li');
-    console.log(cookiesLi);
-    cookiesLi.textContent = `${hours[i]}: ${this.cookiesPerHour[i]}`;
-    cookiesUl.appendChild(cookiesLi);
-  }
-  let totalCookiesLi = document.createElement('li');
-  totalCookiesLi.textContent = `Total: ${this.totalDailyCookies}`;
-  cookiesUl.appendChild(totalCookiesLi);
-
-  //Table for all of this stuff
-
   let locationTable = document.getElementById('storeLocationTable');
+
   let locationRow = document.createElement('tr');
 
   let storeNameCell = document.createElement('td');
   storeNameCell.textContent = this.storeName;
   locationRow.appendChild(storeNameCell);
 
+  for (let i = 0; i < this.cookiesPerHour.length; i++){
+    let cookiesPerHourCell = document.createElement ('td');
+    cookiesPerHourCell.textContent = this.cookiesPerHour[i];
+    locationRow.appendChild(cookiesPerHourCell);
+  }
   locationTable.appendChild(locationRow);
-
 };
-
-
-
 
 let locationOne = new Location('Seattle', 23, 65, 6.3, [], [], 0);
 locationOne.aveCustPerHour();
