@@ -1,3 +1,4 @@
+/* eslint-disable no-trailing-spaces */
 'use strict';
 console.log('Salmon Cookies Company is online');
 
@@ -52,6 +53,11 @@ Location.prototype.render = function () {
     cookiesPerHourCell.textContent = this.cookiesPerHour[i];
     locationRow.appendChild(cookiesPerHourCell);
   }
+
+  let totalDailyCookiesCell = document.createElement ('td');
+  totalDailyCookiesCell.textContent = this.totalDailyCookies;
+  locationRow.appendChild(totalDailyCookiesCell);
+    
   locationTable.appendChild(locationRow);
 };
 
