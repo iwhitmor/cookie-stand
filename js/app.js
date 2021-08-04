@@ -57,6 +57,15 @@ Location.prototype.render = function () {
   cookiesUl.appendChild(totalCookiesLi);
 };
 
+let locationTable = document.getElementById('storeLocationTable');
+let locationRow = document.createElement('tr');
+
+let storeRow = document.createElement('td');
+storeRow.textContent = this.storeName;
+locationRow.appendChild(storeRow);
+
+locationTable.appendChild(locationRow);
+
 let locationOne = new Location('Seattle', 23, 65, 6.3, [], [], 0);
 locationOne.aveCustPerHour();
 locationOne.aveCookiesPerHour();
