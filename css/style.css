@@ -41,10 +41,29 @@ a:hover {
 body {
   background-color: rgb(253, 253, 253);
   font-family: 'Lato', sans-serif; 
+  width: 1200px;
+  margin: 0 auto;
 }
 
+p {
+  text-align: center;
+  margin-top: 20px;
+  width: 600px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+.aboutpat {
+  margin: 0 auto;
+  width: 1200px;
+}
 .sectionfourimages {
-display: inline;
+text-align: center;
+margin-top: 50px;
 }
 
 .headerimg {
@@ -54,7 +73,6 @@ display: inline;
 .storeName {
   background-color: white;
 }
-
 
 /* Black and white - color images */
 .familyimages {
