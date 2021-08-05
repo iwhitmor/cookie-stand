@@ -49,3 +49,29 @@ body {
 .storeName {
   background-color: white;
 }
+
+.familyimg {
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.familybw {
+  height: 150px;
+  width: auto;
+}
+
+.familyimg .family-color {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  height: 150px;
+  width: auto;
+}
+.familyimg:hover .family-color {
+  display: inline;
+}
+
