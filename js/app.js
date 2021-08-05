@@ -32,7 +32,7 @@ Location.prototype.aveCookiesPerHour = function () {
 };
 
  function makeFooterRow () {
-  let parentElement = document.getElementById('salesData');
+  let parentElement = document.getElementById('storeLocationTable');
   let totalRow = document.createElement('tr');
   let totalRowHeader = document.createElement('th');
   totalRowHeader.textContent = 'Totals';
@@ -80,7 +80,7 @@ Location.prototype.render = function () {
   locationRow.appendChild(totalDailyCookiesCell);
 
   locationTable.appendChild(locationRow);
-  makeFooterRow();
+  // makeFooterRow();
 };
 
 let locationOne = new Location('Seattle', 23, 65, 6.3, [], [], 0);
@@ -113,5 +113,4 @@ let locations = [locationOne, locationTwo, locationThree, locationFour, location
 for (let i = 0; i < locations.length; i++) {
   locations[i].render();
 }
-
-
+makeFooterRow();
