@@ -54,7 +54,6 @@ Location.prototype.aveCookiesPerHour = function () {
 }
 let finalTotal = 0;
 
-
 function custPerHour(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
@@ -85,6 +84,10 @@ Location.prototype.render = function () {
   locationRow.appendChild(totalDailyCookiesCell);
 
   locationTable.appendChild(locationRow);
+
+  for (let j = 0; j < locations.length; j++) {
+    finalTotal += this.totalDailyCookies;
+  }
 
 };
 
