@@ -1,5 +1,6 @@
 * {
 box-sizing: border-box;
+font-family: 'Roboto', sans-serif
 }
 header {
   background-color: white;
@@ -46,9 +47,11 @@ body {
 }
 
 p {
-  text-align: center;
-  margin-top: 20px;
-  width: 600px;
+  margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    font-size: 25px;
+    margin-top: 20px;
 }
 
 h2 {
@@ -57,10 +60,6 @@ h2 {
   margin-top: 50px;
 }
 
-.aboutpat {
-  margin: 0 auto;
-  width: 1200px;
-}
 .sectionfourimages {
 text-align: center;
 margin-top: 50px;
@@ -83,7 +82,7 @@ margin-top: 50px;
 }
 
 .familybw {
-  height: 150px;
+  height: 210px;
   width: auto;
 }
 
@@ -93,7 +92,7 @@ margin-top: 50px;
   top: 0;
   left: 0;
   z-index: 99;
-  height: 150px;
+  height: 210px;
   width: auto;
 }
 .familyimages:hover .family-color {
@@ -108,7 +107,7 @@ margin-top: 50px;
 }
 
 .cutterbw {
-  height: 150px;
+  height: 210px;
   width: auto;
 }
 
@@ -118,7 +117,7 @@ margin-top: 50px;
   top: 0;
   left: 0;
   z-index: 99;
-  height: 150px;
+  height: 210px;
   width: auto;
 }
 
@@ -134,7 +133,7 @@ margin-top: 50px;
 }
 
 .fishbw {
-  height: 150px;
+  height: 210px;
   width: auto;
 }
 
@@ -144,7 +143,7 @@ margin-top: 50px;
   top: 0;
   left: 0;
   z-index: 99;
-  height: 150px;
+  height: 210px;
   width: auto;
 }
 
@@ -160,7 +159,7 @@ margin-top: 50px;
 }
 
 .frostedcookiebw {
-  height: 150px;
+  height: 210px;
   width: auto;
 }
 
@@ -170,7 +169,7 @@ margin-top: 50px;
   top: 0;
   left: 0;
   z-index: 99;
-  height: 150px;
+  height: 210px;
   width: auto;
 }
 
