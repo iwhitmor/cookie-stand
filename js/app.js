@@ -46,8 +46,13 @@ Location.prototype.aveCookiesPerHour = function () {
     totalRowHeader = document.createElement('th');
     totalRowHeader.textContent = hourlyTotals;
     totalRow.appendChild(totalRowHeader);
+   
   }
+  let totalOfTotals = document.createElement('th');
+  totalOfTotals.textContent = finalTotal;
+  totalRow.appendChild(totalOfTotals);
 }
+let finalTotal = 0;
 
 
 function custPerHour(min, max) {
@@ -80,8 +85,10 @@ Location.prototype.render = function () {
   locationRow.appendChild(totalDailyCookiesCell);
 
   locationTable.appendChild(locationRow);
-  // makeFooterRow();
+
 };
+
+
 
 let locationOne = new Location('Seattle', 23, 65, 6.3, [], [], 0);
 locationOne.aveCustPerHour();
