@@ -50,7 +50,7 @@ body {
   background-color: white;
 }
 
-.familyimg {
+.familyimages {
   position: relative;
   display: inline-block;
   margin-left: auto;
@@ -62,7 +62,7 @@ body {
   width: auto;
 }
 
-.familyimg .family-color {
+.familyimages .family-color {
   display: none;
   position: absolute;
   top: 0;
@@ -71,7 +71,7 @@ body {
   height: 150px;
   width: auto;
 }
-.familyimg:hover .family-color {
+.familyimages:hover .family-color {
   display: inline;
 }
 
