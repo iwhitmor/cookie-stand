@@ -1,38 +1,31 @@
-/* Universal Selectors */
 * {
 box-sizing: border-box;
 }
-
-/* Header and Footer */
 header {
   background-color: white;
   text-align: center;
 }
 header img {
   max-width: 99%;
- display: block;
- margin-left: auto;
- margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 #headerUl {
   border-top: 2px solid rgb(202, 202, 202);
   border-bottom: 2px solid rgb(202, 202, 202);
   margin-top: 15px;
 }
-
 header nav ul li {
   display: inline-block;
   padding: 10px;
 }
-
 h1 {
   text-align: center;
   font-size: 75px;
   font-family: 'Russo One', sans-serif;
   margin-top: 10px;
 }
-
 a {
   color: black;
   text-decoration: none;
@@ -40,27 +33,19 @@ a {
   padding: 7px;
   font-size: 17px;
 }
-
 a:hover {
   color: white;
   background-color: black;
   text-decoration: 5px;
 }
-
-/* body and paragraphs etc */
-
 body {
   background-color: rgb(253, 253, 253);
   font-family: 'Lato', sans-serif; 
 }
-
-
-
 .headerimg {
   width: 200px;
   height: 50px;
 }
-
 .storeName {
   background-color: white;
 }
