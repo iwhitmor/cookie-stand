@@ -16,8 +16,8 @@ header img {
 }
 
 #headerUl {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 2px solid rgb(202, 202, 202);
+  border-bottom: 2px solid rgb(202, 202, 202);
   margin-top: 15px;
 }
 
@@ -39,8 +39,6 @@ a {
   border-radius: 5px;
   padding: 7px;
   font-size: 17px;
-  /* border-top: 1px solid black;
-  border-bottom: 1px solid black; */
 }
 
 a:hover {
