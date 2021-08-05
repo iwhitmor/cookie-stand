@@ -55,7 +55,21 @@
 
 
   </main>
-
+<form id="new-location">
+<fieldset>
+  <legend>Input data for new Salmon Cookies store</legend>
+  <label for="storeLocation">Store Location:</label>
+  <input id="storeLocation" type="text" required/>
+  <label for="minCustPerHour">Minimum Customers Per Hour</label>
+  <input id="minCustPerHour" type="text" required/>
+  <label for="maxCustPerHour">Maximum Customers Per Hour</label>
+  <input id="maxCustPerHour" type="text" required/>
+  <label for="aveCookiesBought">Average Cookies Bought Per Customer</label>
+  <input id="aveCookiesBought" type="text" required/>
+</fieldset>
+<button id="submit">Submit Form</button>
+<button type="reset" value="Reset">Reset Form</button>
+</form>
 
   <script src="js/app.js"></script>
 </body>
