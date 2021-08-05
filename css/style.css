@@ -42,6 +42,11 @@ body {
   background-color: rgb(253, 253, 253);
   font-family: 'Lato', sans-serif; 
 }
+
+.sectionfourimages {
+display: inline;
+}
+
 .headerimg {
   width: 200px;
   height: 50px;
@@ -50,6 +55,8 @@ body {
   background-color: white;
 }
 
+
+/* Black and white - color images */
 .familyimages {
   position: relative;
   display: inline-block;
@@ -75,3 +82,80 @@ body {
   display: inline;
 }
 
+.cookiecutterimages {
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cutterbw {
+  height: 150px;
+  width: auto;
+}
+
+.cookiecutterimages .cutter-color {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  height: 150px;
+  width: auto;
+}
+
+.cookiecutterimages:hover .cutter-color {
+  display: inline;
+}
+
+.fishimages {
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fishbw {
+  height: 150px;
+  width: auto;
+}
+
+.fishimages .fish-color {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  height: 150px;
+  width: auto;
+}
+
+.fishimages:hover .fish-color {
+  display: inline;
+}
+
+.frostedcookieimages {
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.frostedcookiebw {
+  height: 150px;
+  width: auto;
+}
+
+.frostedcookieimages .frostedcookie-color {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  height: 150px;
+  width: auto;
+}
+
+.frostedcookieimages:hover .frostedcookie-color {
+  display: inline;
+}
