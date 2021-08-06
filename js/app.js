@@ -91,8 +91,6 @@ Location.prototype.render = function () {
 
 };
 
-
-
 let locationOne = new Location('Seattle', 23, 65, 6.3, [], [], 0);
 locationOne.aveCustPerHour();
 locationOne.aveCookiesPerHour();
@@ -124,3 +122,29 @@ for (let i = 0; i < locations.length; i++) {
   locations[i].render();
 }
 makeFooterRow();
+
+//////////FORM STUFF////////////
+
+function handleFormSubmitted(event){
+  event.preventDefault();
+  console.log('this is the event', event);
+  let storeLocationInput = document.getElementById('storeLocation');
+  let storeLocationValue = storeLocationInput['value'];
+  console.log('storeLocationValue ', storeLocationValue);
+
+  let minCustPerHourInput = document.getElementById('minCustPerHour');
+  let minCustPerHourValue = minCustPerHourInput['value'];
+
+  let maxCustPerHourInput = document.getElementById('maxCustPerHour');
+  let maxCustPerHourValue = minCustPerHourInput['value'];
+
+  let aveCookiesBoughtInput = document.getElementById('aveCookiesBought');
+  let aveCookiesBoughtValue = maxCustPerHourInput['value'];
+
+let locationOne = new Location('Seattle', 23, 65, 6.3, [], [], 0);
+locationOne.aveCustPerHour();
+locationOne.aveCookiesPerHour();
+
+let form = document.getElementById('New Location');
+form.reset();
+}
