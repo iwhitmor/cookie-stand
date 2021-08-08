@@ -7,15 +7,15 @@ header {
   text-align: center;
 }
 header img {
-  max-width: 99%;
+  max-width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 #headerUl {
-  border-top: 2px solid rgb(202, 202, 202);
-  border-bottom: 2px solid rgb(202, 202, 202);
-  margin-top: 15px;
+  border-top: 2px black solid;
+  border-bottom: 2px black solid;
+  margin-top: 40px; 
 }
 header nav ul li {
   display: inline-block;
@@ -25,20 +25,50 @@ h1 {
   text-align: center;
   font-size: 75px;
   font-family: 'Russo One', sans-serif;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 a {
   color: black;
   text-decoration: none;
   border-radius: 5px;
   padding: 7px;
-  font-size: 17px;
+  font-size: 25px;
 }
 a:hover {
   color: white;
   background-color: black;
   text-decoration: 5px;
 }
+
+footer {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 100px;
+  font-size: 30px;
+  font-family: 'Russo One', sans-serif;
+}
+
+.location-info {
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 70px;
+  padding: 10px;
+  border-top: 2px black solid;
+  border-right: 2px black solid;
+  border-left: 2px black solid;
+  border-bottom: 2px black solid;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+footer p {
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+  margin-bottom: 100px;
+}
+
 body {
   background-color: rgb(253, 253, 253);
   font-family: 'Lato', sans-serif; 
@@ -51,13 +81,15 @@ p {
     margin-right: auto;
     width: 800px;
     font-size: 25px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 h2 {
   text-align: center;
   font-size: 30px;
   margin-top: 50px;
+  font-family: 'Russo One', sans-serif;
+  margin-bottom: 20px;
 }
 
 .sectionfourimages {
@@ -73,12 +105,12 @@ margin-top: 50px;
   background-color: white;
 }
 
-/* Black and white - color images */
 .familyimages {
   position: relative;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
+  border: 4px solid black;
 }
 
 .familybw {
@@ -104,6 +136,7 @@ margin-top: 50px;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
+  border: 4px solid black;
 }
 
 .cutterbw {
@@ -130,6 +163,7 @@ margin-top: 50px;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
+  border: 4px solid black;
 }
 
 .fishbw {
@@ -156,6 +190,7 @@ margin-top: 50px;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
+  border: 4px solid black;
 }
 
 .frostedcookiebw {
@@ -176,3 +211,62 @@ margin-top: 50px;
 .frostedcookieimages:hover .frostedcookie-color {
   display: inline;
 }
+
+table {
+  background-color: rgb(202, 202, 202);
+  border-radius: 10px;
+  margin-top: 30px;
+  margin: 0 auto;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 7px; 
+  border: solid 3px black;
+  vertical-align: middle;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+tr {
+  border: solid 3px black;
+  text-align: center;
+}
+
+#locationFormSection {
+  margin: auto;
+  border: solid 3px black;
+  width: 500px;
+  box-sizing: border-box;
+  margin-top: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#locationForm {
+  color: black;
+  margin: auto;
+  padding: 5px;
+  background-color: rgb(202, 202, 202);
+  text-align: center;
+}
+
+button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: black;
+  color: rgb(202, 202, 202);
+  margin-top: 15px;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.salespagepic1 {
+  margin-top: 50px;
+  width: 575px;
+}
+
+.salespagepic2 {
+  width: 550px;
+}
+

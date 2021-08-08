@@ -3,9 +3,6 @@
 'use strict';
 console.log('Pats Salmon Cookies is online');
 
-const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-
-
 function Location(storeName, minCustomers, maxCustomers, aveCookies, customersPerHour, cookiesPerHour, totalDailyCookies) {
   this.storeName = storeName;
   this.minCustomers = minCustomers;
@@ -15,6 +12,8 @@ function Location(storeName, minCustomers, maxCustomers, aveCookies, customersPe
   this.cookiesPerHour = cookiesPerHour;
   this.totalDailyCookies = totalDailyCookies;
 }
+
+const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 Location.prototype.aveCustPerHour = function () {
   for (let j = 0; j < hours.length; j++) {
@@ -91,8 +90,6 @@ Location.prototype.render = function () {
 
 };
 
-
-
 let locationOne = new Location('Seattle', 23, 65, 6.3, [], [], 0);
 locationOne.aveCustPerHour();
 locationOne.aveCookiesPerHour();
@@ -124,3 +121,38 @@ for (let i = 0; i < locations.length; i++) {
   locations[i].render();
 }
 makeFooterRow();
+
+//////////FORM STUFF////////////
+
+function handleFormSubmitted(event){
+  event.preventDefault();
+  console.log('this is the event', event);
+  
+  let storeLocationInput = document.getElementById('storeLocation');
+  let storeLocationValue = storeLocationInput['value'];
+  console.log('Store Location ', storeLocationValue);
+
+  let minCustInput = document.getElementById('minCustPerHour');
+  let minCustValue = minCustInput['value'];
+  console.log('Minimum Customers: ', minCustValue);
+
+  let maxCustInput = document.getElementById('maxCustPerHour');
+  let maxCustValue = maxCustInput['value'];
+  console.log('Maximum Customers: ', maxCustValue);
+
+  let cookiesPerSaleInput = document.getElementById('cookiesPerSale');
+  let cookiesPerSaleValue = cookiesPerSaleInput['value'];
+  console.log('Cookies per sale: ', cookiesPerSaleValue);
+
+let locationform = document.getElementById('locationForm');
+locationform.reset();
+
+let newLocation = new Location(storeLocationValue, minCustValue, maxCustValue, cookiesPerSaleValue);
+
+newLocation.aveCustPerHour();
+newLocation.aveCookiesPerHour();
+newLocation.render();
+}
+
+let formElement = document.getElementById('locationForm');
+formElement.addEventListener('submit', handleFormSubmitted);
