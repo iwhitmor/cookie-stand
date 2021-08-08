@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -30,51 +30,58 @@
     <h2>Sales Data For All Locations</h2>
 
     <table id="storeLocationTable">
-    <thead>
-      <tr>
-        <th></th>
-        <th>6am</th>
-        <th>7am</th>
-        <th>8am</th>
-        <th>9am</th>
-        <th>10am</th>
-        <th>11am</th>
-        <th>12pm</th>
-        <th>1pm</th>
-        <th>2pm</th>
-        <th>3pm</th>
-        <th>4pm</th>
-        <th>5pm</th>
-        <th>6pm</th>
-        <th>7pm</th>
-        <th>Daily Location Total</th>
-      </tr>
-    </thead>
-  
+      <thead>
+        <tr>
+          <th></th>
+          <th>6am</th>
+          <th>7am</th>
+          <th>8am</th>
+          <th>9am</th>
+          <th>10am</th>
+          <th>11am</th>
+          <th>12pm</th>
+          <th>1pm</th>
+          <th>2pm</th>
+          <th>3pm</th>
+          <th>4pm</th>
+          <th>5pm</th>
+          <th>6pm</th>
+          <th>7pm</th>
+          <th>Daily Location Total</th>
+        </tr>
+      </thead>
+
     </table>
 
 
   </main>
-<form id="locationForm">
-<fieldset>
-  <legend>Input data for new Salmon Cookies store</legend>
-  <label for="storeLocation">Store Location:</label>
-  <input id="storeLocation" type="text" required/>
-  <br>
-  <label for="minCustPerHour">Minimum Customers Per Hour</label>
-  <input id="minCustPerHour" type="text" required/>
-  <br>
-  <label for="maxCustPerHour">Maximum Customers Per Hour</label>
-  <input id="maxCustPerHour" type="text" required/>
-  <br>
-  <label for="cookiesPerSale">Average Cookies Bought Per Customer</label>
-  <input id="cookiesPerSale" type="text" required/>
-</fieldset>
-<button id="submit">Submit Form</button>
-<button type="reset" value="Reset">Reset Form</button>
-</form>
+  <section id="locationFormSection">
+    <form id="locationForm">
+      <fieldset>
+        <legend>Input data for new Salmon Cookies store</legend>
+        <label for="storeLocation">Store Location:</label>
+        <input id="storeLocation" type="text" required />
+        <br>
+        <label for="minCustPerHour">Minimum Customers Per Hour</label>
+        <input id="minCustPerHour" type="text" required />
+        <br>
+        <label for="maxCustPerHour">Maximum Customers Per Hour</label>
+        <input id="maxCustPerHour" type="text" required />
+        <br>
+        <label for="cookiesPerSale">Average Cookies Bought Per Customer</label>
+        <input id="cookiesPerSale" type="text" required />
+        <button id="submit">Submit Form</button>
+        <button type="reset" value="Reset">Reset Form</button>
+      </fieldset>
+    </form>
+  </section>
 
-  <script src="js/app.js"></script>
+  <div>
+    <img src="/img/salmon.png" class="salespagepic1" alt="">
+    <img src="/img/chinook.jpeg" class="salespagepic2" alt="">
+  </div>
+
+
 </body>
 
 <footer>
@@ -114,7 +121,9 @@
     <div>555-666-7777</div>
     <div>Open: 6AM-8PM</div>
   </section>
-  <p>“Sometimes me think, what is friend? And then me say: a friend is someone to share last cookie with.” - Cookie Monster</p>
+  <p>“Sometimes me think, what is friend? And then me say: a friend is someone to share last cookie with.” - Cookie
+    Monster</p>
 </footer>
+<script src="js/app.js"></script>
 
 </html>
