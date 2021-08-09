@@ -7,7 +7,7 @@ function Location(storeName, minCustomers, maxCustomers, aveCookies, customersPe
   this.storeName = storeName;
   this.minCustomers = parseInt(minCustomers);
   this.maxCustomers = parseInt(maxCustomers);
-  this.aveCookies = aveCookies;
+  this.aveCookies = parseInt(aveCookies);
   this.customersPerHour = customersPerHour;
   this.cookiesPerHour = cookiesPerHour;
   this.totalDailyCookies = totalDailyCookies;
@@ -24,6 +24,7 @@ Location.prototype.aveCustPerHour = function () {
 Location.prototype.aveCookiesPerHour = function () {
   for (let j = 0; j < hours.length; j++) {
     let oneHour = Math.floor(this.customersPerHour[j] * this.aveCookies);
+    console.log('one hour',oneHour);
     this.totalDailyCookies += oneHour;
     this.cookiesPerHour.push(oneHour);
   }
@@ -31,12 +32,12 @@ Location.prototype.aveCookiesPerHour = function () {
 };
 
  function makeFooterRow () {
-  let parentElement = document.getElementById('storeLocationTable');
+  let tfooter = document.getElementById('tfooter');
   let totalRow = document.createElement('tr');
   let totalRowHeader = document.createElement('th');
   totalRowHeader.textContent = 'Totals';
   totalRow.appendChild(totalRowHeader);
-  parentElement.appendChild(totalRow);
+  tfooter.appendChild(totalRow);
   for(let i = 0; i < hours.length; i++){
     let hourlyTotals = 0;
     for(let j = 0; j < locations.length; j++){
@@ -147,8 +148,8 @@ function handleFormSubmitted(event){
 let locationform = document.getElementById('locationForm');
 locationform.reset();
 
-let newLocation = new Location(storeLocationValue, minCustValue, maxCustValue, cookiesPerSaleValue);
-console.log(newLocation);
+let newLocation = new Location(storeLocationValue, minCustValue, maxCustValue, cookiesPerSaleValue, [], [], 0);
+console.log('this is the new store', newLocation);
 
 newLocation.aveCustPerHour();
 newLocation.aveCookiesPerHour();
