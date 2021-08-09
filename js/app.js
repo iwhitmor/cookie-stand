@@ -148,6 +148,7 @@ let locationform = document.getElementById('locationForm');
 locationform.reset();
 
 let newLocation = new Location(storeLocationValue, minCustValue, maxCustValue, cookiesPerSaleValue);
+console.log(newLocation);
 
 newLocation.aveCustPerHour();
 newLocation.aveCookiesPerHour();
