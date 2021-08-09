@@ -5,8 +5,8 @@ console.log('Pats Salmon Cookies is online');
 
 function Location(storeName, minCustomers, maxCustomers, aveCookies, customersPerHour, cookiesPerHour, totalDailyCookies) {
   this.storeName = storeName;
-  this.minCustomers = minCustomers;
-  this.maxCustomers = maxCustomers;
+  this.minCustomers = parseInt(minCustomers);
+  this.maxCustomers = parseInt(maxCustomers);
   this.aveCookies = aveCookies;
   this.customersPerHour = customersPerHour;
   this.cookiesPerHour = cookiesPerHour;
@@ -148,6 +148,7 @@ let locationform = document.getElementById('locationForm');
 locationform.reset();
 
 let newLocation = new Location(storeLocationValue, minCustValue, maxCustValue, cookiesPerSaleValue);
+console.log(newLocation);
 
 newLocation.aveCustPerHour();
 newLocation.aveCookiesPerHour();
